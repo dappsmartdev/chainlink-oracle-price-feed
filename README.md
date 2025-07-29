@@ -4,6 +4,8 @@
 
 This project deploys a Solidity smart contract, `PriceFeedConsumer.sol`, to the Polygon network using Foundry. The contract fetches real-time token prices in USDT for top cryptocurrencies (e.g., ETH, WBTC, XAUT, POL, USDC, LINK, AAVE, UNI, DAI) using Chainlink Price Feeds, mimicking a CoinMarketCap-like token price list. It supports adding new tokens and is designed for DApp integration to display token prices.
 
+![Screenshot of the application](./screenshot.png)
+
 ## Prerequisites
 
 - **Foundry**: Install Foundry to compile, test, and deploy the contract.
@@ -261,5 +263,3 @@ Other top 50 CoinMarketCap tokens (e.g., BNB, SOL, XRP) can be added when Chainl
 ## License
 
 MIT License. See `LICENSE` file for details.
-
-<!-- 0x950938071B3F36D49Ef146F3b93a9F26226a5C6D -->
