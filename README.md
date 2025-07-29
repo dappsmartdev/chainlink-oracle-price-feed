@@ -162,13 +162,11 @@ The `PriceFeedConsumer.sol` contract:
    - Update `src/PriceFeedConsumer.sol` constructor with Mainnet feed addresses:
      ```solidity
      priceFeeds[ETH] = AggregatorV3Interface(0xF9680D99D6C9589e2a93a78A04A279e509205945); // ETH/USDT
-     priceFeeds[WBTC] = AggregatorV3Interface(0xA6dCb24f0f0Ce3A3e8EbA1462D1CfA3eB3f6B5Ef); // WBTC/BTC
      priceFeeds[XAUT] = AggregatorV3Interface(0x3f3cc79f7B8D7E8e2A0e79fA4dB4f2A03fA56369); // XAUT/USDT
      priceFeeds[POL] = AggregatorV3Interface(0xAB594600376Ec9fD91F8e885dADF0CE036862dE0); // POL/USDT
      priceFeeds[USDC] = AggregatorV3Interface(0xfE4A8cc5b5B2366C1B58Bea3858e81843581b2F7); // USDC/USDT
      priceFeeds[LINK] = AggregatorV3Interface(0xd9FFdb71EbE7496cC440152d43986Aae0AB76665); // LINK/USDT
      priceFeeds[AAVE] = AggregatorV3Interface(0x72484B12719E23115761D5DA1646945632979bB6); // AAVE/USDT
-     priceFeeds[UNI] = AggregatorV3Interface(0x3e7eF8f50246f725885102E8238CBba33F276747); // UNI/USDT
      priceFeeds[DAI] = AggregatorV3Interface(0x4746DeC9e833A82EC7C2C1356372CcF2cfcD2F3D); // DAI/USDT
      priceFeeds[BTC] = AggregatorV3Interface(0xc907E116054Ad103354f2D350FD2514433D57F6f); // BTC/USDT
      ```
