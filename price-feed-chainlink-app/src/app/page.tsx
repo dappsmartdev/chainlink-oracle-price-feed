@@ -180,15 +180,24 @@ export default function Home() {
           <Typography variant="h4" color="text.primary">
             Token Price Dashboard
           </Typography>
-          <Button
-            variant="outlined"
-            size="small"
-            startIcon={<RefreshIcon />}
-            onClick={handleRefetchTokenList}
-            disabled={isTokenListLoading}
-          >
-            Refresh List
-          </Button>
+          <Box sx={{ display: "flex", gap: 2, alignItems: "center" }}>
+            {!isConnected && (
+              <w3m-button
+                label="connect wallet"
+                balance="hide"
+                loadingLabel="connecting"
+              />
+            )}
+            <Button
+              variant="outlined"
+              size="small"
+              startIcon={<RefreshIcon />}
+              onClick={handleRefetchTokenList}
+              disabled={isTokenListLoading}
+            >
+              Refresh List
+            </Button>
+          </Box>
         </Box>
 
         {!isConnected ? (
@@ -248,10 +257,10 @@ interface TokenPriceRowProps {
   tokenInfo: TokenInfo;
   tokenPrice: TokenPrice | undefined;
   onRefetchPrice: () => void;
-  isPriceLoading: () => boolean;
+  isPriceLoading: boolean;
 }
 
-function TokenPriceRow({ tokenInfo, tokenPrice, onRefetchPrice,isPriceLoading }: TokenPriceRowProps) {
+function TokenPriceRow({ tokenInfo, tokenPrice, onRefetchPrice, isPriceLoading }: TokenPriceRowProps) {
   const { token, symbol } = tokenInfo;
   const baseSymbol = symbol.split("/")[0];
 
